@@ -118,11 +118,11 @@ streamlit run app/app.py
 ```
 
 ## 🚀 Future Improvements
-
-This project is designed as a scalable foundation for intelligent retrieval-based systems. Planned enhancements include:
-
+|
+->This project is designed as a scalable foundation for intelligent retrieval-based systems.     | Planned enhancements include:
+|
 ### Conversational Memory
-Enable multi-turn context so the assistant can refine recommendations across follow-up queries (e.g., “something lighter than the last one”).
+-> Enable multi-turn context so the assistant can refine recommendations across follow-up           queries (e.g., “something lighter than the last one”).
 
 ### Automated Dataset Refresh
 Periodic ingestion of new movie data using the TMDB API, followed by incremental embedding and FAISS index updates.
