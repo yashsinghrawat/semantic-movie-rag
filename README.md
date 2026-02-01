@@ -142,7 +142,8 @@ Extend the same architecture to other domains such as Books, Music, Podcasts, or
 ## 👤 Author
 
 Yash Singh Rawat (
-B.Tech — Electronics & Communication Engineering
+B.Tech — Electronics & Communication Engineering,
+
 Jaypee Institute of Information Technology, Noida
 )
 
