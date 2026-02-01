@@ -1,7 +1,7 @@
 # 🎬 AI Movie Recommendation Assistant  
 ### Intent-Aware Semantic Search + RAG System (FAISS × LLaMA-3)
 
-🚀 **Live Demo:** https://<your-streamlit-app-url>
+🚀 **Live Demo:** //https://sugy3zqpcef5wwxfydqvrq.streamlit.app/
 
 ---
 
