@@ -141,11 +141,12 @@ Extend the same architecture to other domains such as Books, Music, Podcasts, or
 
 ## 👤 Author
 
-Yash Singh Rawat (
+Yash Singh Rawat 
+
 B.Tech — Electronics & Communication Engineering,
 
 Jaypee Institute of Information Technology, Noida
-)
+
 
 🔍 Interests: Machine Learning, NLP, Retrieval Systems, RAG architectures
 
