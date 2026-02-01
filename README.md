@@ -95,16 +95,18 @@ The LLM is **strictly constrained**:
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
+```text
 semantic/
 ├── app/
-│ └── app.py # Streamlit application
+│   └── app.py               # Streamlit application
 ├── models/
-│ ├── movies_metadata.csv # Movie dataset
-│ └── faiss_index.bin # Vector index
+│   ├── movies_metadata.csv  # Movie dataset
+│   └── faiss_index.bin      # Vector index
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
@@ -115,32 +117,38 @@ pip install -r requirements.txt
 streamlit run app/app.py
 ```
 
-📈 Future Improvements
+## 🚀 Future Improvements
 
-Conversational memory (“more like #2”)
+This project is designed as a scalable foundation for intelligent retrieval-based systems. Planned enhancements include:
 
-Scheduled data updates via TMDB API
+### Conversational Memory
+Enable multi-turn context so the assistant can refine recommendations across follow-up queries (e.g., “something lighter than the last one”).
 
-Feedback loop (👍 / 👎 to improve ranking)
+### Automated Dataset Refresh
+Periodic ingestion of new movie data using the TMDB API, followed by incremental embedding and FAISS index updates.
 
-Multi-domain expansion (Books / Music)
+### User Feedback Loop
+Collect 👍 / 👎 feedback to continuously improve ranking through implicit relevance learning.
 
-🎯 Why This Project Matters
+#### Explainability Layer
+Explicit reasoning traces showing why each movie was selected (genre match, intent match, semantic similarity).
 
-This project demonstrates:
+### Multi-Domain Expansion
+Extend the same architecture to Books, Music, Podcasts, or News using domain-specific embeddings.
 
-System-level ML thinking
 
-Practical RAG architecture
-
-Production-safe LLM usage
-
-Strong UX for AI systems
-
-It is designed to mirror real-world AI applications, not tutorials.
-
-👤 Author
+## 👤 Author
 
 Yash Singh Rawat
-Electronics & Communication Engineering
-Aspiring ML / AI Engineer
+B.Tech — Electronics & Communication Engineering
+Jaypee Institute of Information Technology, Noida
+
+🔍 Interests: Machine Learning, NLP, Retrieval Systems, RAG architectures
+
+🧠 Focus Areas: Semantic Search, Representation Learning, System-Level ML Design
+
+💻 GitHub: https://github.com/yashsinghrawat
+
+🔗 LinkedIn: https://www.linkedin.com/in/yash-singh-rawat-838268287/
+
+This project was built to demonstrate end-to-end applied AI thinking — from embeddings and vector search to intent-aware reasoning and deployment — not just model training.
