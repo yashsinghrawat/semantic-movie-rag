@@ -113,3 +113,34 @@ semantic/
 ```bash
 pip install -r requirements.txt
 streamlit run app/app.py
+```
+
+📈 Future Improvements
+
+Conversational memory (“more like #2”)
+
+Scheduled data updates via TMDB API
+
+Feedback loop (👍 / 👎 to improve ranking)
+
+Multi-domain expansion (Books / Music)
+
+🎯 Why This Project Matters
+
+This project demonstrates:
+
+System-level ML thinking
+
+Practical RAG architecture
+
+Production-safe LLM usage
+
+Strong UX for AI systems
+
+It is designed to mirror real-world AI applications, not tutorials.
+
+👤 Author
+
+Yash Singh Rawat
+Electronics & Communication Engineering
+Aspiring ML / AI Engineer
