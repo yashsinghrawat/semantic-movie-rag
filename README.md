@@ -119,22 +119,24 @@ streamlit run app/app.py
 
 ## 🚀 Future Improvements
 
-This project is designed as a scalable foundation for intelligent retrieval-based systems.     Planned enhancements include:
+This project is designed as a scalable foundation for intelligent, retrieval-based AI systems. The following upgrades would push it further toward production-grade capability:
 
-### Conversational Memory
--> Enable multi-turn context so the assistant can refine recommendations across follow-up        queries (e.g., “something lighter than the last one”).
+🧠 Conversational Memory
+Enable multi-turn context so the assistant can refine recommendations across follow-up queries
+(e.g., “something lighter than the last one”).
 
-### Automated Dataset Refresh
--> Periodic ingestion of new movie data using the TMDB API, followed by incremental embedding    and FAISS index updates.
+🔄 Automated Dataset Refresh
+Periodic ingestion of new movie data via the TMDB API, followed by incremental embedding and FAISS index updates.
 
-### User Feedback Loop
--> Collect 👍 / 👎 feedback to continuously improve ranking through implicit relevance learning.
+👍 User Feedback Loop
+Collect 👍 / 👎 signals to continuously improve ranking through implicit relevance learning.
 
-#### Explainability Layer
--> Explicit reasoning traces showing why each movie was selected (genre match, intent match,  semantic similarity).
+🔍 Explainability Layer
+Provide explicit reasoning traces showing why each movie was selected
+(semantic similarity, intent match, genre alignment).
 
-### Multi-Domain Expansion
--> Extend the same architecture to Books, Music, Podcasts, or News using domain-specific embeddings.
+🌐 Multi-Domain Expansion
+Extend the same architecture to other domains such as Books, Music, Podcasts, or News using domain-specific embeddings.
 
 
 ## 👤 Author
