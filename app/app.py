@@ -204,6 +204,17 @@ def validate_llm_output(answer, allowed_titles):
     return True
 
 
+def is_non_movie_query(query):
+    bad_keywords = [
+        "news", "stock", "bitcoin", "crypto", "weather",
+        "politics", "price", "ipl", "match", "score",
+        "economy", "finance"
+    ]
+    
+    query = query.lower()
+    
+    return any(word in query for word in bad_keywords)
+
 # ================= UI =================
 query = st.text_input(
     "Describe the movie you want",
@@ -211,6 +222,15 @@ query = st.text_input(
 )
 
 if query:
+
+        # -------- STRICT DOMAIN GUARD --------
+    if is_non_movie_query(query):
+        st.warning(
+            "⚠️ This system is designed only for movie recommendations. "
+            "This query is outside its scope."
+        )
+        st.stop()
+        
     # -------- Retrieval --------
     query_vec = embedder.encode([query], convert_to_numpy=True).astype("float32")
     distances, indices = index.search(query_vec, 15)
