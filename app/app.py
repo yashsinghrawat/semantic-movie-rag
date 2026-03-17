@@ -203,6 +203,21 @@ def validate_llm_output(answer, allowed_titles):
                 return False
     return True
 
+def is_gibberish(query):
+    words = query.strip().split()
+    
+    # Too short or no real structure
+    if len(words) == 1 and len(query) > 10:
+        return True
+    
+    # Too many random characters (low vowel ratio)
+    vowels = "aeiou"
+    vowel_count = sum(1 for c in query.lower() if c in vowels)
+    
+    if vowel_count / (len(query) + 1e-9) < 0.2:
+        return True
+    
+    return False
 
 def is_non_movie_query(query):
     bad_keywords = [
@@ -223,6 +238,12 @@ query = st.text_input(
 
 if query:
 
+        # -------- GIBBERISH FILTER --------
+    if is_gibberish(query):
+        st.warning(
+            "⚠️ I couldn't understand your query. Please enter a meaningful movie-related request."
+        )
+        st.stop()
         # -------- STRICT DOMAIN GUARD --------
     if is_non_movie_query(query):
         st.warning(
@@ -230,7 +251,7 @@ if query:
             "This query is outside its scope."
         )
         st.stop()
-        
+
     # -------- Retrieval --------
     query_vec = embedder.encode([query], convert_to_numpy=True).astype("float32")
     distances, indices = index.search(query_vec, 15)
