@@ -222,7 +222,7 @@ def is_gibberish(query):
 def is_non_movie_query(query):
     bad_keywords = [
         "news", "stock", "bitcoin", "crypto", "weather",
-        "politics", "price", "ipl", "match", "score",
+         "price", "ipl", "match", "score",
         "economy", "finance"
     ]
     
